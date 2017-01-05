@@ -1,12 +1,13 @@
-#include <SDL.h>
+#include "Game.h"
 
-int main(int argc, char ** argv)
+int main(int argc, char** argv)
 {
-	SDL_Init(SDL_INIT_VIDEO);
+	Game rogueLicker;
 
-	// game code eventually goes here
+	if (!rogueLicker.init())
+		return -1;
 
-	SDL_Quit();
+	rogueLicker.start();
 
 	return 0;
 }
